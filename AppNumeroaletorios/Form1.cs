@@ -24,13 +24,27 @@ namespace AppNumeroaletorios
 
         private void btnLenarcaja_Click(object sender, EventArgs e)
         {
-            Random r = new Random();
+            int s = 0, numero;
+            float pro;
+            
+            Random aleatorio = new Random();
+            this.lstNumeros.Sorted = false;
             this.lstNumeros.Items.Clear();
-            for(int n = 20; n <= 50; n++)
+            for(int c = 20; c <= 50; c++)
             {
-                int num = r.Next(20, 50);
-                this.lstNumeros.Items.Add(num);
+                 numero = aleatorio.Next(20, 50);
+                this.lstNumeros.Items.Add(numero);
+                s = s + numero;
+                
             }
+            pro = s/30;
+            this.txtSuma.Text = s.ToString();
+            this.txtPromedio.Text = pro.ToString("0.00");        
+        }
+
+        private void btnOrdenarLista_Click(object sender, EventArgs e)
+        {
+            this.lstNumeros.Sorted = true;
 
         }
     }

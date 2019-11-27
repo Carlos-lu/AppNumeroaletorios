@@ -64,6 +64,7 @@
             this.btnOrdenarLista.TabIndex = 2;
             this.btnOrdenarLista.Text = "ORDENAR LISTA";
             this.btnOrdenarLista.UseVisualStyleBackColor = true;
+            this.btnOrdenarLista.Click += new System.EventHandler(this.btnOrdenarLista_Click);
             // 
             // txtPromedio
             // 
